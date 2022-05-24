@@ -1,5 +1,69 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
+.padreTitular
+.titular{
+  color: #FFFFFF;
+  text-shadow: #474747 3px 5px 2px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 3rem;
+}
+body {
+  height: 100%;
+  background: rgb(61,53,53);
+  background: linear-gradient(90deg, rgba(61,53,53,1) 0%, rgba(255,195,195,1) 13%, rgba(220,195,255,1) 21%, rgba(169,160,255,1) 26%, rgba(145,143,255,1) 31%, rgba(144,158,255,1) 34%, rgba(143,164,255,1) 37%, rgba(138,184,255,1) 40%, rgba(132,207,255,1) 44%, rgba(132,255,250,1) 49%, rgba(104,255,0,1) 57%, rgba(176,255,0,1) 61%, rgba(255,248,0,1) 64%, rgba(255,192,0,1) 71%, rgba(255,115,0,1) 78%, rgba(255,68,0,1) 82%, rgba(255,34,0,1) 87%, rgba(186,28,4,1) 93%, rgba(106,14,0,1) 97%);
+  
+}
+.formulario{
+  margin: 0 auto;
+  min-width: 20rem;
+  height: 20rem;
+}
+.input {
+  padding: 1rem;
+  width: 90%;
+  background-color: rgba(59, 58, 58, 0.534);
+  color: #ffffff;
+  border: 0;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-family: 'Dosis', sans-serif;
+}
+::placeholder { color: rgb(255, 255, 255); }
 
-
+.tarea{
+  display:flex;
+  justify-content: space-between;
+  min-width: 90%;
+  height: 2rem;
+  backdrop-filter: blur(120px);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border: 0 ;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+.textoTarea{
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+.boton{
+  background: rgb(255,0,0);
+  background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(175,3,3,1) 100%);
+  border:none;
+  border-radius: 10px;
+  color:#ffffff;
+  font-weight: 1000;
+  width: 1.5rem;
+  cursor: pointer;
+}
+.boton:hover{
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 25px 13px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 25px 13px 15px 8px rgba(0,0,0,0);
+}
