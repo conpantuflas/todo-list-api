@@ -37,8 +37,8 @@ body {
 .tarea{
   display:flex;
   justify-content: space-between;
-  min-width: 90%;
-  height: 2rem;
+  width: 90%;
+  min-height: 2rem;
   backdrop-filter: blur(120px);
   padding: 1rem;
   margin-top: 0.5rem;
@@ -53,6 +53,8 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   font-size: 1.5rem;
   margin: 0;
   color: rgb(255, 255, 255);
+  max-width: 30rem;
+  Line-break: auto
 }
 .boton{
   background: rgb(255,0,0);
@@ -61,7 +63,8 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   border-radius: 10px;
   color:#ffffff;
   font-weight: 1000;
-  width: 1.5rem;
+  max-width: 2rem;
+  max-height: 2rem;
   cursor: pointer;
 }
 .boton:hover{
@@ -69,7 +72,7 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   box-shadow: 0px 10px 13px -7px #000000, 25px 13px 15px 8px rgba(0,0,0,0);
 }
 .totalTareas{
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
   font-family: 'Dosis', sans-serif;
   color: #474747;
