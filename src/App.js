@@ -5,13 +5,16 @@ function App() {
   //---------------------------------------------------------------------------------estados:
   const [recopGet, setRecopGet] = useState([])
   const [inputValue, setInputValue] = useState()
+  const [mensaje, setMensaje] = useState('')
 
   //---------------------------------------------------------------------------------recepcion de datos
   useEffect(() => {
     fetch('https://assets.breatheco.de/apis/fake/todos/user/judith')
       .then(respuesta => respuesta.json())
-      .then(data => setRecopGet(data)
-      )
+      .then(data => {
+        setRecopGet(data) 
+      
+      })
   }, [recopGet])
 
   //------------------------------------------------------------------------------------estilos
@@ -29,7 +32,7 @@ function App() {
             body: JSON.stringify([...recopGet, { label: inputValue, done: false }])
           })
             .then(respuesta => respuesta.json())
-            .then(data => console.log(data))
+            .then(data => setMensaje(data.result))
         }}>
             <input className='input' placeholder='tarea...'
               onChange={(e) => {
@@ -41,7 +44,6 @@ function App() {
             recopGet.map((e, i) => {
               return <div className='tarea' key={i}><p className="textoTarea">{e.label}</p>
               <button onClick={(e)=>{
-                console.log(i)
                 const noEliminados = recopGet.filter((tarea, indice)=> i != indice)
                 fetch('https://assets.breatheco.de/apis/fake/todos/user/judith',{
                   method: "PUT",
@@ -49,10 +51,13 @@ function App() {
                   body: JSON.stringify(noEliminados)
                 })
                 .then(respuesta => respuesta.json())
-                
-              }} className="boton">x</button>{e.eliminado}</div>
+                .then(data => setMensaje(data.result)) 
+              }} className="boton">x</button>{e.done}</div>
             })
           }
+        </div>
+        <div className='contadorPadre'> 
+          <h1 className='totalTareas'>{ mensaje !== ""  ? mensaje  : null}</h1>
         </div>
       </div>
     </div>
